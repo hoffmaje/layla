@@ -18,3 +18,7 @@ class MainTest(TestCase):
         response = Client().post('/login/', {'username': 'john', 'password': 'dow'})
         self.assertRedirects(response, '/')
 
+    def test_logout(self):
+        response = Client().post('/logout/')
+        self.assertRedirects(response, '/')
+

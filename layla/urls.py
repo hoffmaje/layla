@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Copyright 2012 Jens Hoffmann.
+# Copyright 2012 Jens Hoffmann
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from django.conf.urls.defaults import patterns, include, url
 
@@ -17,4 +17,5 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^vocabularymanager/', include('layla.vocabularymanager.urls')),
+    url(r'^', include('layla.main.urls')),
 )

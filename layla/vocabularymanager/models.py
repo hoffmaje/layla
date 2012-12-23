@@ -2,6 +2,7 @@
 # Copyright 2012 Jens Hoffmann (hoffmaje)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Language(models.Model):
@@ -14,6 +15,7 @@ class Language(models.Model):
 class Phrase(models.Model):
     phrase = models.CharField(max_length=80)
     language = models.ForeignKey(Language)
+    user = models.ForeignKey(User)
 
     def __unicode__(self):
         return self.phrase

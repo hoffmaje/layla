@@ -13,7 +13,7 @@ def home(request):
 
 @login_required
 def phrase(request):
-    phrases = Phrase.objects.all()
+    phrases = Phrase.objects.filter(user=request.user)
     return render(request, 'vocabularymanager/phrase.html',
         { 'phrases': phrases })
 

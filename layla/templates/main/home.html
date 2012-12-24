@@ -1,11 +1,9 @@
-<html>
-  <body>
-    {% if user.is_authenticated %}
-    <a href="/logout/">Logout</a>
-    <a href="{% url layla.vocabularymanager.views.home %}">Vocabulary Manager</a>
-    {% else %}
-    <a href="/login/">Login</a>
-    {% endif %}
-  </body>
-</html>
-
+{% extends "base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+<a href="/logout/">Logout</a>
+<a href="{% url layla.vocabularymanager.views.home %}">Vocabulary Manager</a>
+{% else %}
+<a href="/login/">Login</a>
+{% endif %}
+{% endblock %}

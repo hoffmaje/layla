@@ -13,10 +13,9 @@ class Language(models.Model):
 
 
 class Phrase(models.Model):
-    phrase = models.CharField(max_length=80)
+    value = models.CharField(max_length=80)
     language = models.ForeignKey(Language)
-    user = models.ForeignKey(User)
 
     def __unicode__(self):
-        return self.phrase
+        return self.value
 

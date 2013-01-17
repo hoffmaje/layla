@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<h1>{% trans "Vocabulary" %}</h1>
+<ul>
+{% for phrase in phrases %}
+  <li>{{ phrase }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
